@@ -27,12 +27,12 @@ export default function Navibar() {
           <div class="collapse navbar-collapse" id="navbarsExample01">
             <ul class="navbar-nav mr-auto">
               <li class="nav-item active">
-                <a class="nav-link" href="index.html">
+                <a class="nav-link" href="/index">
                   Home <span class="sr-only">(current)</span>
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="posts.html">
+                <a class="nav-link" href="/posts">
                   Posts
                 </a>
               </li>

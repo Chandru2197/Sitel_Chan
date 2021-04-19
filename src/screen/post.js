@@ -7,7 +7,7 @@ import LOGO from "../component/image/logo.jpg";
 
 // core components
 
-class Home extends Component {
+class Post extends Component {
   // React.useEffect(() => {
   //   document.body.classList.add("index-page");
   //   document.body.classList.add("sidebar-collapse");
@@ -19,6 +19,9 @@ class Home extends Component {
   //     document.body.classList.remove("sidebar-collapse");
   //   };
   // });
+  NavigateScreen = () => {
+    window.location.href = "/post";
+  };
   render() {
     return (
       <React.Fragment>
@@ -59,7 +62,7 @@ class Home extends Component {
                     class="btn btn-primary"
                     type="button"
                     onClick={() => {
-                      console.log("00");
+                      this.NavigateScreen();
                     }}
                   >
                     Go To Posts &raquo;
@@ -74,4 +77,4 @@ class Home extends Component {
   }
 }
 
-export default Home;
+export default Post;
