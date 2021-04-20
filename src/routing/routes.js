@@ -1,18 +1,47 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
+import React, { Component } from "react";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 
+import Header from "../component/Navbar";
+
+// Screen
 import Home from "../screen/home";
+import Post from "../screen/post";
 
-ReactDOM.render(
-  <BrowserRouter>
-    <Switch>
-      <Switch>
-        <Route path="/home" render={(props) => <Home {...props} />} />
-        <Redirect to="/home" />
-        <Redirect from="/" to="/home" />
-      </Switch>
-    </Switch>
-  </BrowserRouter>,
-  document.getElementById("root")
-);
+export default class AdminRoutes extends Component {
+  render() {
+    return (
+      <Router>
+        <Route
+          exact
+          path={"/"}
+          render={(props) => (
+            <React.Fragment>
+              <Header />
+              <Home {...props} />
+            </React.Fragment>
+          )}
+        />
+        <Route
+          exact
+          path={"/home"}
+          render={(props) => (
+            <React.Fragment>
+              <Header />
+              <Home {...props} />
+            </React.Fragment>
+          )}
+        />
+        <Route
+          exact
+          path={"/post"}
+          render={(props) => (
+            <React.Fragment>
+              <Header />
+              <Post {...props} />
+            </React.Fragment>
+          )}
+        />
+      </Router>
+    );
+  }
+}

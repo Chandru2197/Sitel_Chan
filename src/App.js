@@ -1,10 +1,21 @@
-import "./styles.css";
+import React, { Component } from "react";
+import Routing from "./routing/routes";
 
-export default function App() {
-  return (
-    <div className="App">
-      <h1>Hello CodeSandbox</h1>
-      <h2>Start editing to see some magic happen!</h2>
-    </div>
-  );
+class App extends Component {
+  async componentWillMount() {
+    // let ips = await CmsContent.getIP();
+    // if (ips) {
+    //   localStorage.setItem("IP", ips.data.ip);
+    //   localStorage.setItem("IPTime", ips.data.time);
+    // }
+  }
+  render() {
+    return (
+      <React.Fragment>
+        <Routing />
+      </React.Fragment>
+    );
+  }
 }
+
+export default App;
