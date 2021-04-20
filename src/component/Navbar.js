@@ -1,5 +1,13 @@
 import React from "react";
 import "./styles.css";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link,
+  useRouteMatch,
+  useParams
+} from "react-router-dom";
 import { Nav, Navbar, NavDropdown } from "react-bootstrap";
 // import { ReactComponent as Logo } from "./logo.svg";
 
@@ -9,12 +17,12 @@ export default function Navibar() {
   return (
     <React.Fragment>
       <div>
-        <nav class="navbar navbar-dark bg-dark">
-          <a class="navbar-brand" href="index.html">
+        <nav className="navbar navbar-dark bg-dark">
+          <a className="navbar-brand" href="index.html">
             Dummy Blog
           </a>
           <button
-            class="navbar-toggler"
+            className="navbar-toggler"
             type="button"
             data-toggle="collapse"
             data-target="#navbarsExample01"
@@ -22,23 +30,28 @@ export default function Navibar() {
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <span class="navbar-toggler-icon"></span>
+            <span className="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse" id="navbarsExample01">
-            <ul class="navbar-nav mr-auto">
-              <li class="nav-item active">
-                <a class="nav-link" href="/index">
-                  Home <span class="sr-only">(current)</span>
-                </a>
+          <div className="collapse navbar-collapse" id="navbarsExample01">
+            <ul className="navbar-nav mr-auto">
+              <li className="nav-item active">
+                <Link className="nav-link" to="/home">
+                  Home <span className="sr-only">(current)</span>
+                </Link>
+                {/* <a class="nav-link" href="/home">
+                </a> */}
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/post">
+              <li className="nav-item">
+                <Link className="nav-link" to="/post">
+                  Post
+                </Link>
+                {/* <a class="nav-link" href="/post">
                   Posts
-                </a>
+                </a> */}
               </li>
-              <li class="nav-item dropdown">
+              <li className="nav-item dropdown">
                 <a
-                  class="nav-link dropdown-toggle"
+                  className="nav-link dropdown-toggle"
                   href="#"
                   id="dropdown01"
                   data-toggle="dropdown"
@@ -47,17 +60,20 @@ export default function Navibar() {
                 >
                   Contact Us
                 </a>
-                <div class="dropdown-menu" aria-labelledby="dropdown01">
-                  <a class="dropdown-item" href="https://www.linkedin.com/">
+                <div className="dropdown-menu" aria-labelledby="dropdown01">
+                  <a className="dropdown-item" href="https://www.linkedin.com/">
                     Linkedin
                   </a>
-                  <a class="dropdown-item" href="https://twitter.com/">
+                  <a className="dropdown-item" href="https://twitter.com/">
                     Twitter
                   </a>
-                  <a class="dropdown-item" href="https://www.facebook.com/">
+                  <a className="dropdown-item" href="https://www.facebook.com/">
                     Facebook
                   </a>
-                  <a class="dropdown-item" href="https://www.instagram.com/">
+                  <a
+                    className="dropdown-item"
+                    href="https://www.instagram.com/"
+                  >
                     Instagram
                   </a>
                 </div>
