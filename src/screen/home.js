@@ -8,17 +8,15 @@ import LOGO from "../component/image/logo.jpg";
 // core components
 
 class Home extends Component {
-  // React.useEffect(() => {
-  //   document.body.classList.add("index-page");
-  //   document.body.classList.add("sidebar-collapse");
-  //   document.documentElement.classList.remove("nav-open");
-  //   window.scrollTo(0, 0);
-  //   document.body.scrollTop = 0;
-  //   return function cleanup() {
-  //     document.body.classList.remove("index-page");
-  //     document.body.classList.remove("sidebar-collapse");
-  //   };
-  // });
+  constructor(props) {
+    super(props);
+    this.state = {
+      data: []
+    };
+  }
+  NavigateScreen = () => {
+    window.location.href = "/post";
+  };
   render() {
     return (
       <React.Fragment>
@@ -59,7 +57,7 @@ class Home extends Component {
                     class="btn btn-primary"
                     type="button"
                     onClick={() => {
-                      console.log("00");
+                      this.NavigateScreen();
                     }}
                   >
                     Go To Posts &raquo;

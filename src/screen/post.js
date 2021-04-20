@@ -1,24 +1,14 @@
 import React, { Component } from "react";
 
 import LOGO from "../component/image/logo.jpg";
-// reactstrap components
-// import {
-// } from "reactstrap";
-
-// core components
 
 class Post extends Component {
-  // React.useEffect(() => {
-  //   document.body.classList.add("index-page");
-  //   document.body.classList.add("sidebar-collapse");
-  //   document.documentElement.classList.remove("nav-open");
-  //   window.scrollTo(0, 0);
-  //   document.body.scrollTop = 0;
-  //   return function cleanup() {
-  //     document.body.classList.remove("index-page");
-  //     document.body.classList.remove("sidebar-collapse");
-  //   };
-  // });
+  constructor(props) {
+    super(props);
+    this.state = {
+      data: []
+    };
+  }
   NavigateScreen = () => {
     window.location.href = "/post";
   };
