@@ -14,10 +14,9 @@ class Post extends Component {
   };
   render() {
     return (
-      <React.Fragment>
         <div class="container">
           <br />
-          <h1>Home Page</h1>
+          <h1>All Posts</h1>
           <br />
           <main role="main">
             <div class="jumbotron">
@@ -62,7 +61,6 @@ class Post extends Component {
             </div>
           </main>
         </div>
-      </React.Fragment>
     );
   }
 }
