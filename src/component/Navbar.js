@@ -32,7 +32,7 @@ export default function Navibar() {
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/posts">
+                <a class="nav-link" href="/post">
                   Posts
                 </a>
               </li>

@@ -10,7 +10,7 @@ class Post extends Component {
     };
   }
   NavigateScreen = () => {
-    window.location.href = "/post";
+    // window.location.href = "/post";
   };
   render() {
     return (
