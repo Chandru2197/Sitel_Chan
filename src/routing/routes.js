@@ -6,6 +6,7 @@ import Header from "../component/Navbar";
 // Screen
 import Home from "../screen/home";
 import Post from "../screen/post";
+import AddingPost from "../screen/addingPost";
 
 export default class AdminRoutes extends Component {
   render() {
@@ -43,6 +44,18 @@ export default class AdminRoutes extends Component {
               <Header />
               <div className="app-body">
                 <Post {...props} />
+              </div>
+            </React.Fragment>
+          )}
+        />
+        <Route
+          exact
+          path={"/addpost"}
+          render={(props) => (
+            <React.Fragment>
+              <Header />
+              <div className="app-body">
+                <AddingPost {...props} />
               </div>
             </React.Fragment>
           )}
