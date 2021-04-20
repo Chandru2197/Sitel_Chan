@@ -10,7 +10,7 @@ class Post extends Component {
     };
   }
   NavigateScreen = () => {
-    // window.location.href = "/post";
+    window.location.href = "/addpost";
   };
   render() {
     return (
@@ -23,7 +23,11 @@ class Post extends Component {
             </div>
             <div className="col-sm-6"></div>
             <div className="col-sm-2">
-              <button type="button" className="btn btn-success float-right">
+              <button
+                type="button"
+                className="btn btn-success float-right"
+                onClick={() => this.NavigateScreen()}
+              >
                 + New Post
               </button>
             </div>
@@ -35,7 +39,7 @@ class Post extends Component {
           <small> Written by Guru Kannan on 2021-02-02 23:18:18.254554</small>
           <br />
           <br />
-          <p style="white-space:pre-wrap">
+          <p style={{ whiteSpace: "pre-wrap" }}>
             Amazon Kendra is an intelligent search service powered by machine
             learning. Kendra reimagines enterprise search for your websites and
             applications so your employees and customers can easily find the

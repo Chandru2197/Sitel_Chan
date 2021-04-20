@@ -19,7 +19,7 @@ export default class AdminRoutes extends Component {
             <React.Fragment>
               <Header />
               <div className="app-body">
-                <Home {...props} />
+                <AddingPost {...props} />
               </div>
             </React.Fragment>
           )}
